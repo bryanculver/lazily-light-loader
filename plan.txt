@@ -1,0 +1,63 @@
+==================================
+=== Project Plan for Loader v4 ===
+==================================
+
+CLASSES PREFIX == @@@@
+
+FEATURES DESIRED
+- Database <=> Class Model
+  = Enhanced structure inside class
+  = Enhanced privacy of class data
+  = Better 1=1 symetry
+  = Set data via functions with fallback
+    <
+      if(function_exits($this->$k()) {
+        $this->$k($v);
+      } else {
+        $this->__set($k, $v);
+      }
+
+    >
+- One Database Connection
+- Minimal require Statements
+- Automatic Session Processing
+
+
+POSSIBLE FUTURE FEATURES
+- Community Driven Plugins
+
+
+
+FUNCTION OUTLINE
+- Enter Site
+- Loader Kicks In
+
+
+
+
+DEFINED VARIABLES / OBJECTS
+- $loader     == Brain of the opperation [@@@@() class]
+  * Should always be available
+
+- $user       == Current user
+  = If logged in, will be @@@@_user() class
+  = If not, will be FALSE
+
+- $session    == Current session
+  = If logged in, will be @@@@_session() class
+  = If not, will be FALSE
+
+- $db         == Current DB session
+  * Should always be available
+
+? $admin      == Possible loader admin panel
+
+THINGS TO RESEARCH
+- Prevent cloning of classes / object (to protect the integrity of the
+  defined classes from desyncrinization)
+
+- Proper name
+
+- MySQLi Documentation
+
+

@@ -1,8 +1,9 @@
 ==================================
 === Project Plan for Loader v4 ===
 ==================================
-
-CLASSES PREFIX == @@@@
++++    Lazily, light loader    +++
+++++++++++++++++++++++++++++++++++
+CLASSES PREFIX == l3
 
 FEATURES DESIRED
 - Database <=> Class Model
@@ -16,7 +17,6 @@ FEATURES DESIRED
       } else {
         $this->__set($k, $v);
       }
-
     >
 - One Database Connection
 - Minimal require Statements
@@ -36,15 +36,15 @@ FUNCTION OUTLINE
 
 
 DEFINED VARIABLES / OBJECTS
-- $loader     == Brain of the opperation [@@@@() class]
+- $loader     == Brain of the opperation [l3() class]
   * Should always be available
 
 - $user       == Current user
-  = If logged in, will be @@@@_user() class
+  = If logged in, will be l3_user() class
   = If not, will be FALSE
 
 - $session    == Current session
-  = If logged in, will be @@@@_session() class
+  = If logged in, will be l3_session() class
   = If not, will be FALSE
 
 - $db         == Current DB session

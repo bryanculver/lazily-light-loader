@@ -3,12 +3,12 @@
 class control_index extends l3_controller {
 
 	public function __construct() {
-		$this->method_fallback = 'fallback'; 
 		parent::__construct();
 	}
 	
 	public function index() {
-		var_dump($this);
+		global $_CLEAN_REQUEST;
+		var_dump($_CLEAN_REQUEST);
 	}
 	
 	public function fallback() {

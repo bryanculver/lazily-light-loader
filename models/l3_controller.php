@@ -4,6 +4,9 @@ class l3_controller {
 	
 	protected $method_fallback = 'index';
 	
+	var $db = NULL;
+	var $request = NULL;
+	
 	public function __construct()
 	{
 		
